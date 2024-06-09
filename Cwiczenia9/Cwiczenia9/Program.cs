@@ -9,6 +9,7 @@ var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 builder.Services.AddScoped<ITripService, TripService>();
+builder.Services.AddScoped<IClientService, ClientService>();
 builder.Services.AddControllers();
 builder.Services.AddDbContext<MasterContext>(  
     options => options.UseSqlServer("Name=ConnectionStrings:Default"));

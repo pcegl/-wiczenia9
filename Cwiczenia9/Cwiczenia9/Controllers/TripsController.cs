@@ -34,12 +34,10 @@ public class TripsController : ControllerBase
         }
         catch (NotFoundException e)
         {
-            // Wycieczka nie istnieje
             return NotFound(e.Message);
         }
         catch (BadRequestException e)
         {
-            // Klient jest juz przypisany do wycieczki
             return BadRequest(e.Message);
         }
 
